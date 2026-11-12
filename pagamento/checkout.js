@@ -1,10 +1,10 @@
 (() => {
   'use strict';
   const plans = {
-    assinatura: { name: 'Nelis Básico', price: 97, posts: 0, features: ['Conversa direta com a Nelis no Telegram', 'Ideias, legendas e roteiros', 'Planejamento de publicações', 'Prompts para imagens', 'Não inclui arte pronta'] },
-    essencial: { name: 'Essencial', price: 197, posts: 4, features: ['Uma publicação por semana', 'Arte + legenda', '1 rodada de ajustes por post', 'Calendário simples'] },
-    assistida: { name: 'Assistida', price: 397, posts: 8, features: ['Duas publicações por semana', 'Arte + legenda', 'Calendário do mês', 'Relatório de desempenho', 'Radar de concorrência'] },
-    presenca: { name: 'Presença', price: 597, posts: 12, features: ['Três publicações por semana', 'Arte + legenda', 'Calendário + análise mensal', 'Radar de concorrência', 'Prioridade de ajuste'] }
+    assinatura: { name: 'Nelis Básico', price: 97, posts: 0, features: ['Conversa direta com a Nelis no Telegram', 'Ideias e sugestões de conteúdo', 'Criação de legendas', 'Planejamento de publicações', 'Criação de prompts para imagens', 'Não inclui arte pronta'] },
+    essencial: { name: 'Essencial', price: 197, posts: 4, features: ['Acesso à Nelis incluído', '4 posts com arte pronta e legenda', '1 rodada de ajustes por post', 'Sugestões de temas ao longo do mês'] },
+    assistida: { name: 'Assistida', price: 397, posts: 8, features: ['Acesso à Nelis incluído', '8 posts com arte pronta e legenda', '1 rodada de ajustes por post', 'Sugestões de temas ao longo do mês'] },
+    presenca: { name: 'Presença', price: 597, posts: 12, features: ['Acesso à Nelis incluído', '12 posts com arte pronta e legenda', '1 rodada de ajustes por post', 'Prioridade de ajuste'] }
   };
   const money = value => new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(value);
   const el = id => document.getElementById(id);

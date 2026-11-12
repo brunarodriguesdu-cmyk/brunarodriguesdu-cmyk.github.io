@@ -26,7 +26,15 @@ PAGES = [
 ]
 
 # Seções internas que NÃO podem ir para o ar
-CUT_MARKERS = ["### Para o desenvolvimento", "### Pontos para a advogada revisar"]
+CUT_MARKERS = [
+    "### Para o desenvolvimento",
+    "### Pontos para a advogada revisar",
+    # Blocos internos criados em 12/11/2026: guardam cláusulas ainda não decididas e
+    # explicações de revisão. Nada disso pode ir para a página pública — campo em branco
+    # publicado vira promessa vazia ou contrato incompleto.
+    "### Pendências comerciais e jurídicas (não publicar)",
+    "### Pendências técnicas e jurídicas (não publicar)",
+]
 
 TEMPLATE = """<!DOCTYPE html>
 <html lang="pt-BR">
@@ -60,8 +68,8 @@ TEMPLATE = """<!DOCTYPE html>
 
 <main class="wrap">
   <div class="draft-banner" style="margin-top:26px">
-    <strong>Rascunho.</strong> Este documento precisa de revisão jurídica antes de ser publicado.
-    Campos entre <mark>[colchetes]</mark> ainda não foram preenchidos.
+    <strong>Versão em revisão profissional.</strong> Este documento ainda não passou por revisão
+    jurídica e não deve ser tratado como aprovado.
   </div>
   <article class="legal narrow">
 {body}
@@ -204,6 +212,13 @@ def md_to_html(md: str) -> str:
 
 
 def clean(md: str) -> str:
+    # Anotações internas de revisão não vão para o público: são bilhetes para a
+    # advogada e para a conferência técnica, não texto de contrato.
+    md = re.sub(r"\s*\*\*\[CONFERIR[^\]]*\]\*\*", "", md)
+    md = re.sub(r"\s*\*\[[CONFERIR[^\]]*\]\*", "", md)
+    md = re.sub(r"\s*\*\*\[REVISAR COM ADVOGADA[^\]]*\]\*\*", "", md)
+    md = re.sub(r"\s*\[REVISAR COM ADVOGADA[^\]]*\]", "", md)
+
     for marker in CUT_MARKERS:
         if marker in md:
             md = md.split(marker)[0]
