@@ -6,8 +6,8 @@
  * This static redirect does not confirm payment or activate the service.
  */
 window.NELIS_PAYMENTS = Object.freeze({
-  assinatura: { enabled: false, url: "", mode: "", provider: "Kiwify" },
-  essencial: { enabled: false, url: "", mode: "", provider: "Kiwify" },
-  assistida: { enabled: false, url: "", mode: "", provider: "Kiwify" },
-  presenca: { enabled: false, url: "", mode: "", provider: "Kiwify" }
+  assinatura: { enabled: true, url: "https://pay.kiwify.com.br/rpda7kg", mode: "recurring", provider: "Kiwify" },
+  essencial: { enabled: true, url: "https://pay.kiwify.com.br/tGS9Y2j", mode: "recurring", provider: "Kiwify" },
+  assistida: { enabled: true, url: "https://pay.kiwify.com.br/uMB0K4T", mode: "recurring", provider: "Kiwify" },
+  presenca: { enabled: true, url: "https://pay.kiwify.com.br/ncYVSit", mode: "recurring", provider: "Kiwify" }
 });
