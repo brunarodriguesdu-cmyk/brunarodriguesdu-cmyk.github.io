@@ -1,7 +1,7 @@
 (() => {
   'use strict';
   const plans = {
-    assinatura: { name: 'Assinatura Nelis', price: 97, posts: 0, features: ['Acesso pelo Telegram', 'Ideias, legendas e roteiros', 'Análise e planejamento', 'Sem fidelidade'] },
+    assinatura: { name: 'Nelis Básico', price: 97, posts: 0, features: ['Conversa direta com a Nelis no Telegram', 'Ideias, legendas e roteiros', 'Planejamento de publicações', 'Prompts para imagens', 'Não inclui arte pronta'] },
     essencial: { name: 'Essencial', price: 197, posts: 4, features: ['Uma publicação por semana', 'Arte + legenda', '1 rodada de ajustes por post', 'Calendário simples'] },
     assistida: { name: 'Assistida', price: 397, posts: 8, features: ['Duas publicações por semana', 'Arte + legenda', 'Calendário do mês', 'Relatório de desempenho', 'Radar de concorrência'] },
     presenca: { name: 'Presença', price: 597, posts: 12, features: ['Três publicações por semana', 'Arte + legenda', 'Calendário + análise mensal', 'Radar de concorrência', 'Prioridade de ajuste'] }
@@ -30,12 +30,12 @@
     const plan = plans[key];
     document.title = `Plano ${plan.name} — Nelis`;
     el('plan-name').textContent = plan.name;
-    el('post-count').textContent = `${plan.posts} posts`;
+    el('post-count').textContent = plan.posts ? `${plan.posts} posts` : 'Sem posts';
     el('price').textContent = money(plan.price);
     el('minimum-total').textContent = money(plan.price) + ' / mês';
     el('included-title').textContent = plan.posts
       ? `${plan.posts} posts, com a sua identidade.`
-      : 'Assinatura da Nelis: o assistente no seu Telegram.';
+      : 'Nelis Básico: a assistente no seu Telegram.';
     el('features').replaceChildren(...plan.features.map(text => { const li = document.createElement('li'); li.textContent = text; return li; }));
     el('contact-link').href = `https://wa.me/5522996119580?text=${encodeURIComponent(`Olá! Quero contratar o plano ${plan.name} da Nelis, ${plan.posts ? `com ${plan.posts} posts por ${money(plan.price)} por mês` : `por ${money(plan.price)} por mês`}. Gostaria de confirmar as condições e a forma de pagamento.`)}`;
     const payment = paymentFor(key);

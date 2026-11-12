@@ -232,7 +232,7 @@ section{padding:clamp(52px,7vw,92px) 0}
 }
 .plan.hl{border:2px solid var(--lilac-2);box-shadow:var(--shadow);position:relative}
 .plan.hl::after{
-  content:"mais escolhido";position:absolute;top:-13px;left:26px;
+  content:"recomendado";position:absolute;top:-13px;left:26px;
   background:var(--lilac-2);color:#fff;font-size:.68rem;font-weight:800;
   letter-spacing:.08em;text-transform:uppercase;padding:5px 12px;border-radius:999px;
 }
