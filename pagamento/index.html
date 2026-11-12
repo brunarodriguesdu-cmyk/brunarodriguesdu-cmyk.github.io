@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#2a0c31">
+  <title>Seu plano — Nelis</title>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="checkout.css">
+  <script src="config.js" defer></script>
+  <script src="checkout.js" defer></script>
+</head>
+<body class="checkout-page">
+  <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+  <header class="checkout-header"><div class="checkout-wrap">
+    <a class="checkout-brand" href="../" aria-label="Nelis — início">Nelis<span aria-hidden="true">✦</span></a>
+    <a class="back-link" href="../#planos">← Voltar aos planos</a>
+  </div></header>
+  <main id="conteudo" class="checkout-wrap">
+    <div class="page-intro">
+      <p class="eyebrow">O próximo passo do seu marketing</p>
+      <h1>Seu plano. Seu ritmo.<br><span>Você no controle.</span></h1>
+      <p>Confira o que está incluído e escolha como começar com a Nelis.</p>
+    </div>
+    <div class="checkout-grid">
+      <section class="selection" aria-labelledby="choose-title">
+        <h2 id="choose-title">Qual plano combina com você?</h2>
+        <fieldset class="plan-options">
+          <legend class="sr-only">Escolha um plano mensal</legend>
+          <label class="plan-option"><input type="radio" name="plano" value="assinatura"><span><strong>Assinatura Nelis</strong><small>Acesso ao assistente · 1 empresa</small></span><span class="option-price">R$ 97<small>/mês</small></span></label>
+          <label class="plan-option"><input type="radio" name="plano" value="essencial"><span><strong>Essencial</strong><small>4 posts por mês</small></span><span class="option-price">R$ 197<small>/mês</small></span></label>
+          <label class="plan-option"><input type="radio" name="plano" value="assistida"><span><strong>Assistida</strong><small>8 posts por mês</small></span><span class="option-price">R$ 397<small>/mês</small></span></label>
+          <label class="plan-option"><input type="radio" name="plano" value="presenca"><span><strong>Presença</strong><small>12 posts por mês</small></span><span class="option-price">R$ 597<small>/mês</small></span></label>
+        </fieldset>
+        <div class="included" id="included" hidden>
+          <p class="eyebrow">Incluído no seu plano</p>
+          <h3 id="included-title"></h3>
+          <ul id="features"></ul>
+          <p class="included-note">Todos os pacotes incluem a assinatura da Nelis. Cada post reúne arte, legenda e sua aprovação.</p>
+        </div>
+        <div class="onboarding">
+          <h2>E depois da contratação?</h2>
+          <ol>
+            <li><span>01</span><div><strong>Confirmamos seu pagamento</strong><p>A contratação segue após a confirmação pelo meio de pagamento.</p></div></li>
+            <li><span>02</span><div><strong>Conhecemos a sua marca</strong><p>Alinhamos seu negócio, seu público e o jeito de se comunicar.</p></div></li>
+            <li><span>03</span><div><strong>Começamos com a sua aprovação</strong><p>Você recebe as orientações de acesso e revisa o conteúdo antes da publicação.</p></div></li>
+          </ol>
+        </div>
+      </section>
+      <aside class="order-card" aria-labelledby="summary-title">
+        <div class="order-heading"><span class="star" aria-hidden="true">✦</span><p class="eyebrow">Seu próximo capítulo</p><h2 id="summary-title">Resumo do plano</h2></div>
+        <div id="empty-state"><p>Escolha um plano para conferir os valores e continuar.</p></div>
+        <div id="order-details" hidden>
+          <div class="summary-line"><span>Plano</span><strong id="plan-name"></strong></div>
+          <div class="summary-line"><span>Produção mensal</span><strong id="post-count"></strong></div>
+          <div class="monthly"><span>Valor mensal</span><p><strong id="price"></strong><span>/mês</span></p></div>
+          <p class="commitment">Mensal, <strong>sem fidelidade</strong>: cancelar é livre.<br>Valor da mensalidade: <strong id="minimum-total"></strong>.<br><small>Preço de lançamento até 31/12/2026. Em 01/01/2027: assinatura R$ 127 e pacotes R$ 247 / 447 / 597.</small></p>
+          <div class="payment-status" role="status" aria-live="polite"><strong id="payment-title"></strong><p id="payment-description"></p></div>
+          <a id="payment-link" class="payment-button" hidden>Continuar para o pagamento <span aria-hidden="true">→</span></a>
+          <a id="contact-link" class="contact-button" href="https://wa.me/5522996119580">Combinar contratação pelo WhatsApp <span aria-hidden="true">↗</span></a>
+          <p class="payment-note" id="payment-note">Nenhuma cobrança é feita nesta página.</p>
+          <details class="conditions"><summary>Condições do pacote</summary><p>Onboarding de voz incluso no primeiro mês. Cancelamento livre a qualquer momento, sem multa.</p><p>Reels, carrosséis e gestão da publicação são serviços sob orçamento.</p><p>Confira as condições de contratação e cancelamento antes de concluir o pagamento.</p></details>
+        </div>
+        <div class="reassurance"><span aria-hidden="true">♡</span><p>Você participa.<br>Você revisa. Você aprova.</p></div>
+      </aside>
+    </div>
+    <noscript><div class="no-script">Ative o JavaScript para selecionar seu plano ou <a href="https://wa.me/5522996119580?text=Quero%20contratar%20um%20plano%20da%20Nelis">fale com a Nelis pelo WhatsApp</a>. Nenhuma cobrança foi feita.</div></noscript>
+  </main>
+  <footer class="checkout-footer"><div class="checkout-wrap"><p>Nelis · Assistente de marketing com IA</p><nav aria-label="Informações legais"><a href="../termos/">Termos de Uso</a><a href="../privacidade/">Privacidade</a><a href="../#contato">Contato</a></nav></div></footer>
+</body>
+</html>

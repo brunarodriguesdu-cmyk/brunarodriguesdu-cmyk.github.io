@@ -1,0 +1,8 @@
+# Configuração mínima para Netlify (Cloudflare Pages usa o arquivo _headers)
+[build]
+  publish = "."
+
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404

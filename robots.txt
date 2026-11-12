@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+Disallow: /privacidade/
+Disallow: /termos/
+Disallow: /conexao/
+Disallow: /exclusao-de-dados/
+
+# As páginas legais ficam fora do índice de busca de propósito:
+# existem para cumprir exigências da Meta e da LGPD, não para ranquear,
+# e ainda são rascunho até a revisão jurídica.
+
+Sitemap: https://[DOMINIO]/sitemap.xml
