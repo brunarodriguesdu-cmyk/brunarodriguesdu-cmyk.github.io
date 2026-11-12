@@ -9,4 +9,4 @@ Disallow: /exclusao-de-dados/
 # existem para cumprir exigências da Meta e da LGPD, não para ranquear,
 # e ainda são rascunho até a revisão jurídica.
 
-Sitemap: https://[DOMINIO]/sitemap.xml
+Sitemap: https://brunarodriguesdu-cmyk.github.io/sitemap.xml
